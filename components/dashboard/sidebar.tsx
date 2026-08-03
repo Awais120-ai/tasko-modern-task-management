@@ -1,6 +1,18 @@
 "use client"
 
-import { LayoutDashboard, BookOpen, Calendar, TrendingUp, GraduationCap, Settings, HelpCircle, LogOut } from "lucide-react"
+import {
+  LayoutDashboard,
+  BookOpen,
+  Calendar,
+  TrendingUp,
+  GraduationCap,
+  ClipboardList,
+  FileQuestion,
+  Award,
+  Settings,
+  HelpCircle,
+  LogOut,
+} from "lucide-react"
 import { cn } from "@/lib/utils"
 import { useState } from "react"
 import Link from "next/link"
@@ -9,6 +21,9 @@ import { usePathname } from "next/navigation"
 const menuItems = [
   { icon: LayoutDashboard, label: "Dashboard", href: "/" },
   { icon: BookOpen, label: "My Courses", badge: "12", href: "/tasks" },
+  { icon: ClipboardList, label: "Assignments", badge: "5", href: "/assignments" },
+  { icon: FileQuestion, label: "Quizzes", href: "/quizzes" },
+  { icon: Award, label: "Results", href: "/results" },
   { icon: Calendar, label: "Schedule", href: "/calendar" },
   { icon: TrendingUp, label: "Progress", href: "/analytics" },
   { icon: GraduationCap, label: "Instructors", href: "/team" },
