@@ -3,13 +3,13 @@
 import { Card } from "@/components/ui/card"
 import { Plus } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import Image from "next/image"
 
-const projects = [
-  { name: "Develop API Endpoints", date: "Nov 26, 2024", color: "bg-blue-500", icon: "⚡" },
-  { name: "Onboarding Flow", date: "Nov 28, 2024", color: "bg-cyan-500", icon: "🌊" },
-  { name: "Build Dashboard", date: "Nov 30, 2024", color: "bg-emerald-500", icon: "🎨" },
-  { name: "Optimize Page Load", date: "Dec 5, 2024", color: "bg-amber-500", icon: "⚡" },
-  { name: "Cross-Browser Testing", date: "Dec 6, 2024", color: "bg-purple-500", icon: "🔍" },
+const courses = [
+  { name: "Web Development Bootcamp", lessons: "18 / 42 lessons", progress: 43, image: "/courses/web-development.png" },
+  { name: "UI/UX Design Fundamentals", lessons: "24 / 30 lessons", progress: 80, image: "/courses/ux-design.png" },
+  { name: "Data Science with Python", lessons: "9 / 36 lessons", progress: 25, image: "/courses/data-science.png" },
+  { name: "Machine Learning A-Z", lessons: "12 / 28 lessons", progress: 43, image: "/courses/machine-learning.png" },
 ]
 
 export function ProjectList() {
@@ -19,27 +19,30 @@ export function ProjectList() {
       style={{ animationDelay: "700ms" }}
     >
       <div className="flex items-center justify-between mb-6">
-        <h2 className="text-xl font-semibold text-foreground">Project</h2>
+        <h2 className="text-xl font-semibold text-foreground">Continue Learning</h2>
         <Button variant="outline" size="sm" className="transition-all duration-300 hover:scale-105 bg-transparent">
           <Plus className="w-4 h-4 mr-1" />
-          New
+          Browse
         </Button>
       </div>
       <div className="space-y-3">
-        {projects.map((project, index) => (
+        {courses.map((course) => (
           <div
-            key={project.name}
-            className="flex items-center gap-3 p-3 rounded-lg hover:bg-secondary transition-all duration-300 cursor-pointer group"
-            style={{ animationDelay: `${800 + index * 100}ms` }}
+            key={course.name}
+            className="flex items-center gap-3 p-2 rounded-lg hover:bg-secondary transition-all duration-300 cursor-pointer group"
           >
-            <div
-              className={`${project.color} w-10 h-10 rounded-lg flex items-center justify-center text-xl transition-transform duration-300 group-hover:scale-110 group-hover:rotate-12`}
-            >
-              {project.icon}
+            <div className="relative w-12 h-12 rounded-lg overflow-hidden flex-shrink-0 transition-transform duration-300 group-hover:scale-105">
+              <Image src={course.image || "/placeholder.svg"} alt={course.name} fill className="object-cover" />
             </div>
-            <div className="flex-1">
-              <p className="font-medium text-foreground text-sm">{project.name}</p>
-              <p className="text-xs text-muted-foreground">Due date: {project.date}</p>
+            <div className="flex-1 min-w-0">
+              <p className="font-medium text-foreground text-sm truncate">{course.name}</p>
+              <p className="text-xs text-muted-foreground mb-1.5">{course.lessons}</p>
+              <div className="w-full bg-secondary rounded-full h-1.5 overflow-hidden">
+                <div
+                  className="h-full bg-primary rounded-full transition-all duration-1000 ease-out"
+                  style={{ width: `${course.progress}%` }}
+                />
+              </div>
             </div>
           </div>
         ))}

@@ -7,17 +7,17 @@ import { ChevronLeft, ChevronRight, Video } from "lucide-react"
 import { useState } from "react"
 
 const events = [
-  { id: 1, title: "Team Standup", time: "09:00 AM", duration: "30 min", type: "meeting", color: "bg-blue-500" },
-  { id: 2, title: "Design Review", time: "11:00 AM", duration: "1 hour", type: "review", color: "bg-purple-500" },
+  { id: 1, title: "JavaScript Basics Live", time: "09:00 AM", duration: "45 min", type: "meeting", color: "bg-blue-500" },
+  { id: 2, title: "Design Critique Session", time: "11:00 AM", duration: "1 hour", type: "review", color: "bg-emerald-500" },
   {
     id: 3,
-    title: "Client Presentation",
+    title: "Advanced React Patterns",
     time: "02:00 PM",
     duration: "2 hours",
-    type: "presentation",
+    type: "meeting",
     color: "bg-green-600",
   },
-  { id: 4, title: "Code Review Session", time: "04:30 PM", duration: "45 min", type: "meeting", color: "bg-amber-500" },
+  { id: 4, title: "Python Q&A Workshop", time: "04:30 PM", duration: "45 min", type: "meeting", color: "bg-amber-500" },
 ]
 
 const daysInMonth = Array.from({ length: 30 }, (_, i) => i + 1)
@@ -72,7 +72,7 @@ export function CalendarContent() {
         </Card>
 
         <Card className="p-6">
-          <h3 className="font-semibold text-lg mb-4">Today's Events</h3>
+          <h3 className="font-semibold text-lg mb-4">{"Today's Classes"}</h3>
           <div className="space-y-3">
             {events.map((event, index) => (
               <div

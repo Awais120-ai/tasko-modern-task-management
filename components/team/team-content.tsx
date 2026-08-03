@@ -8,38 +8,38 @@ import { Mail, Phone, MoreHorizontal } from "lucide-react"
 
 const teamMembers = [
   {
-    name: "Alexandra Deff",
-    role: "Product Designer",
-    email: "alexandra@tasko.com",
+    name: "Sarah Mitchell",
+    role: "Web Development",
+    email: "sarah@learnly.com",
     status: "active",
-    tasks: 12,
+    tasks: 5,
     avatar: "/avatars/avatar-1.jpg",
-    initials: "AD",
+    initials: "SM",
   },
   {
     name: "Edwin Adenike",
-    role: "Frontend Developer",
-    email: "edwin@tasko.com",
+    role: "UI/UX Design",
+    email: "edwin@learnly.com",
     status: "active",
-    tasks: 8,
+    tasks: 3,
     avatar: "/avatars/avatar-2.jpg",
     initials: "EA",
   },
   {
     name: "Isaac Oluwatemilorun",
-    role: "Backend Developer",
-    email: "isaac@tasko.com",
+    role: "Data Science",
+    email: "isaac@learnly.com",
     status: "away",
-    tasks: 15,
+    tasks: 4,
     avatar: "/avatars/avatar-3.jpg",
     initials: "IO",
   },
   {
     name: "David Oshodi",
-    role: "UI/UX Designer",
-    email: "david@tasko.com",
+    role: "Digital Marketing",
+    email: "david@learnly.com",
     status: "active",
-    tasks: 6,
+    tasks: 2,
     avatar: "/avatars/avatar-4.jpg",
     initials: "DO",
   },
@@ -77,7 +77,7 @@ export function TeamContent() {
 
               <div className="pt-2 border-t border-border">
                 <div className="flex items-center justify-between text-sm">
-                  <span className="text-muted-foreground">Active Tasks</span>
+                  <span className="text-muted-foreground">Courses Teaching</span>
                   <span className="font-semibold">{member.tasks}</span>
                 </div>
               </div>
@@ -85,11 +85,11 @@ export function TeamContent() {
               <div className="flex gap-2 pt-2">
                 <Button variant="outline" size="sm" className="flex-1 bg-transparent">
                   <Mail className="w-4 h-4 mr-1" />
-                  Email
+                  Message
                 </Button>
                 <Button variant="outline" size="sm" className="flex-1 bg-transparent">
                   <Phone className="w-4 h-4 mr-1" />
-                  Call
+                  Profile
                 </Button>
               </div>
             </div>

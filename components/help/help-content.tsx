@@ -23,20 +23,20 @@ const helpCategories = [
 
 const faqs = [
   {
-    question: "How do I create a new project?",
-    answer: "Click the 'Add Project' button on the dashboard to create a new project.",
+    question: "How do I enroll in a new course?",
+    answer: "Click the 'Browse Courses' button on the dashboard or 'Enroll in Course' on the My Courses page.",
   },
   {
-    question: "Can I invite team members?",
-    answer: "Yes, go to the Team page and click 'Add Member' to invite new team members.",
+    question: "How do I join a live class?",
+    answer: "Upcoming live classes appear on your dashboard and Schedule page. Click 'Join Class' when it's time to start.",
   },
   {
-    question: "How do I track time on tasks?",
-    answer: "Use the Time Tracker widget on the dashboard to start tracking time for your tasks.",
+    question: "How do I track my learning progress?",
+    answer: "Visit the Progress page to see your completed lessons, study hours, and quiz scores.",
   },
   {
-    question: "Can I export my data?",
-    answer: "Yes, you can export your data from the Settings page under Data Management.",
+    question: "How do I get my course certificate?",
+    answer: "Once you complete all lessons in a course, your certificate is issued automatically and available from your profile.",
   },
 ]
 

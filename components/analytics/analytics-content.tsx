@@ -5,10 +5,10 @@ import { TrendingUp, TrendingDown, Users, CheckCircle, Clock, Target, ArrowUpRig
 import { useState } from "react"
 
 const stats = [
-  { title: "Total Tasks Completed", value: "247", change: "+12%", trend: "up", icon: CheckCircle },
-  { title: "Active Projects", value: "12", change: "+3", trend: "up", icon: Target },
-  { title: "Team Members", value: "24", change: "-2", trend: "down", icon: Users },
-  { title: "Avg. Completion Time", value: "2.3", subtitle: "days", change: "-0.5", trend: "up", icon: Clock },
+  { title: "Lessons Completed", value: "247", change: "+12%", trend: "up", icon: CheckCircle },
+  { title: "Active Courses", value: "4", change: "+1", trend: "up", icon: Target },
+  { title: "Study Hours", value: "128", change: "+8", trend: "up", icon: Clock },
+  { title: "Avg. Quiz Score", value: "92", subtitle: "%", change: "+3", trend: "up", icon: Users },
 ]
 
 const monthlyData = [
@@ -70,7 +70,7 @@ export function AnalyticsContent() {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <Card className="p-6">
-          <h3 className="font-semibold text-lg mb-6">Monthly Task Completion</h3>
+          <h3 className="font-semibold text-lg mb-6">Monthly Lessons Completed</h3>
           <div className="space-y-4">
             {monthlyData.map((data, index) => (
               <div
@@ -80,7 +80,7 @@ export function AnalyticsContent() {
               >
                 <div className="flex items-center justify-between text-sm">
                   <span className="font-medium">{data.month}</span>
-                  <span className="text-muted-foreground">{data.tasks} tasks</span>
+                  <span className="text-muted-foreground">{data.tasks} lessons</span>
                 </div>
                 <div className="w-full bg-secondary rounded-full h-2 overflow-hidden">
                   <div
@@ -94,13 +94,13 @@ export function AnalyticsContent() {
         </Card>
 
         <Card className="p-6">
-          <h3 className="font-semibold text-lg mb-6">Project Distribution</h3>
+          <h3 className="font-semibold text-lg mb-6">Courses by Category</h3>
           <div className="space-y-4">
             {[
-              { name: "In Progress", count: 8, color: "bg-blue-500" },
-              { name: "Completed", count: 15, color: "bg-green-600" },
-              { name: "Pending", count: 5, color: "bg-amber-500" },
-              { name: "On Hold", count: 2, color: "bg-gray-500" },
+              { name: "Development", count: 8, color: "bg-blue-500" },
+              { name: "Design", count: 15, color: "bg-green-600" },
+              { name: "Data Science", count: 5, color: "bg-amber-500" },
+              { name: "Marketing", count: 2, color: "bg-gray-500" },
             ].map((item, index) => (
               <div
                 key={item.name}

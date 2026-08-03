@@ -9,8 +9,8 @@ const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Donezo - Project Management Dashboard",
-  description: "Plan, prioritize, and accomplish your tasks with ease",
+  title: "Learnly - Learning Management Dashboard",
+  description: "Learn new skills, track your progress, and achieve your goals with ease",
   generator: "v0.app",
   icons: {
     icon: [

@@ -28,8 +28,8 @@ export function MobileAppCard() {
 
       <div className="relative z-10">
         <Smartphone className="w-6 h-6 mb-3" />
-        <h2 className="text-xl font-bold mb-1">Download our Mobile App</h2>
-        <p className="text-xs opacity-80 mb-4">Get easy in another way</p>
+        <h2 className="text-xl font-bold mb-1">Learn on the go</h2>
+        <p className="text-xs opacity-80 mb-4">Get the Learnly mobile app</p>
 
         <div className="flex flex-col gap-2 mb-4">
           <Button

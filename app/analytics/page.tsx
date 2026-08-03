@@ -10,8 +10,8 @@ export default function AnalyticsPage() {
 
       <main className="flex-1 p-4 lg:p-6 lg:ml-64">
         <Header
-          title="Analytics"
-          description="Track your performance and productivity metrics."
+          title="Progress"
+          description="Track your learning performance and course completion."
           actions={
             <Button
               variant="outline"

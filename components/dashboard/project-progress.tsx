@@ -24,7 +24,7 @@ export function ProjectProgress() {
       className="p-4 transition-all duration-500 hover:shadow-xl animate-slide-in-up overflow-hidden"
       style={{ animationDelay: "800ms" }}
     >
-      <h2 className="text-lg font-semibold text-foreground mb-4">Project Progress</h2>
+      <h2 className="text-lg font-semibold text-foreground mb-4">Overall Progress</h2>
       <div className="flex flex-col items-center">
         <div className="relative w-40 h-40 mb-4">
           <div
@@ -59,7 +59,7 @@ export function ProjectProgress() {
           </svg>
           <div className="absolute inset-0 flex flex-col items-center justify-center">
             <span className="text-4xl font-bold text-foreground">{progress}%</span>
-            <span className="text-xs text-muted-foreground mt-1">Project Ended</span>
+            <span className="text-xs text-muted-foreground mt-1">Courses Completed</span>
           </div>
         </div>
         <div className="flex flex-wrap justify-center gap-3 text-xs">

@@ -48,8 +48,8 @@ export function SettingsContent() {
           {[
             { label: "Email notifications", description: "Receive email about your account activity" },
             { label: "Push notifications", description: "Receive push notifications in your browser" },
-            { label: "Task reminders", description: "Get reminded about upcoming task deadlines" },
-            { label: "Team updates", description: "Notifications about team member activities" },
+            { label: "Class reminders", description: "Get reminded about upcoming live classes" },
+            { label: "New course alerts", description: "Notifications about newly published courses" },
           ].map((item, index) => (
             <div
               key={item.label}

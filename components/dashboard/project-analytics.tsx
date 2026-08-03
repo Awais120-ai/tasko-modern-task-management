@@ -14,6 +14,8 @@ const chartData = [
   { day: "S", value: 50, label: "Saturday" },
 ]
 
+const percentToHours = (value: number) => ((value / 100) * 5).toFixed(1)
+
 const barColors = ["#059669", "#047857", "#10b981", "#065f46", "#059669", "#047857", "#10b981"]
 
 export function ProjectAnalytics() {
@@ -25,7 +27,7 @@ export function ProjectAnalytics() {
     if (active && payload && payload.length) {
       return (
         <div className="bg-foreground text-background px-3 py-2 rounded-lg text-xs font-semibold shadow-lg">
-          <p className="font-bold">{payload[0].value}%</p>
+          <p className="font-bold">{percentToHours(payload[0].value)} hrs</p>
           <p className="text-[10px] opacity-80">{payload[0].payload.label}</p>
         </div>
       )
@@ -39,10 +41,10 @@ export function ProjectAnalytics() {
       style={{ animationDelay: "400ms" }}
     >
       <div className="flex items-center justify-between mb-6">
-        <h2 className="text-xl font-semibold text-foreground">Project Analytics</h2>
+        <h2 className="text-xl font-semibold text-foreground">Learning Activity</h2>
         <div className="flex items-center gap-2 text-xs text-muted-foreground">
           <div className="w-2 h-2 rounded-full bg-emerald-600"></div>
-          <span>Weekly Activity</span>
+          <span>Study hours this week</span>
         </div>
       </div>
 
@@ -99,12 +101,12 @@ export function ProjectAnalytics() {
       {/* Summary stats */}
       <div className="pt-4 border-t border-muted/50 flex items-center justify-between">
         <div className="text-sm">
-          <span className="text-muted-foreground">Average: </span>
-          <span className="font-semibold text-foreground">{average}%</span>
+          <span className="text-muted-foreground">Daily avg: </span>
+          <span className="font-semibold text-foreground">{percentToHours(average)} hrs</span>
         </div>
         <div className="text-sm">
-          <span className="text-muted-foreground">Peak: </span>
-          <span className="font-semibold text-emerald-600">{maxValue}%</span>
+          <span className="text-muted-foreground">Best day: </span>
+          <span className="font-semibold text-emerald-600">{percentToHours(maxValue)} hrs</span>
         </div>
       </div>
     </Card>
