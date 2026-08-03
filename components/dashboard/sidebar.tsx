@@ -35,12 +35,17 @@ const generalItems = [
   { icon: LogOut, label: "Logout", href: "/logout" },
 ]
 
-export function Sidebar() {
+export function Sidebar({ mobile = false }: { mobile?: boolean }) {
   const [hoveredItem, setHoveredItem] = useState<string | null>(null)
   const pathname = usePathname()
 
   return (
-    <aside className="fixed top-0 left-0 w-64 bg-card border-r border-border p-4 h-screen overflow-y-auto lg:block">
+    <aside
+      className={cn(
+        "w-64 bg-card border-r border-border p-4 h-screen overflow-y-auto",
+        mobile ? "block" : "hidden lg:block fixed top-0 left-0",
+      )}
+    >
       <div className="flex items-center gap-2 mb-6 group cursor-pointer">
         <Link href="/" className="flex items-center gap-2">
           <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center transition-transform group-hover:scale-110 duration-300">
